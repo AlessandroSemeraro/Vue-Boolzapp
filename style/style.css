@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #D8DBD5;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+main.container{
+    width: 80vw;
+    height: 90vh;
+    border: 1px solid black;
+    display: flex;
+}
+
+main.container section.container-contacts{
+    width: 30%;
+    height: 100%;
+    border: 1px solid red;
+}
+
+main.container section.container-chat{
+    width: 70%;
+    height: 100%;
+    border: 1px solid rgb(30, 0, 255);
+}
+
+article.my-contact{
+    height: 8vh;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article.active-contact{
+    height: 8vh;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+article.active-contact div.container-chat-active{
+    height: 82vh;
+    width: 100%;
+    border: 1px solid green;
+    overflow-y: auto;
+}
+
+img.img-my-avatar{
+    width: 3.5rem;
+    border-radius: 50%;
+    margin-left: 0.3rem;
+}
+
+.flex-my-contact{
+    display: flex;
+    align-items: center;
+}
+
+div.flex-my-contact p{
+    margin-left: 0.2rem;
+}
+
+div.alerts-info-wrapper{
+    height: 9vh;
+    width: 100%;
+    background-color:#7ED6FC;
+}
+
+div.searchbar-wrapper{
+    height: 5vh;
+    width: 100%;
+    border: 1px solid orange;
+}
+
+div.list-contacts{
+    height:
+}
