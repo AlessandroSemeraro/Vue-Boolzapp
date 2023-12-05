@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!--CSS-->
     <link rel="stylesheet" href="./style/style.css">
+    
+    <!-- Font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <title>Vue-Boolzapp</title>
 </head>
 <body>
@@ -15,7 +20,11 @@
                     <img class="img-my-avatar" src="./img/avatar_io.jpg" alt="myAvatar">
                     <p>Sofia</p>
                 </div>
-                <div></div>
+                <div>
+                    <span class="icon-my-contact"><i class="fa-solid fa-circle-notch" style="color: rgb(177, 177, 177);"></i></span>
+                    <span class="icon-my-contact"><i class="fa-solid fa-message" style="color:rgb(177, 177, 177);"></i></span>
+                    <span class="icon-my-contact"><i class="fa-solid fa-ellipsis-vertical" style="color:rgb(177, 177, 177);"></i></span>
+                </div>
             </article>
             <div class="alerts-info-wrapper">
 
@@ -24,15 +33,38 @@
 
             </div>
             <div class="list-contacts">
-                
+
             </div>
         </section>
         <section class="container-chat">
             <article class="active-contact"> 
-                <div class="container-chat-active">
-
+                <div class="flex-my-contact">
+                    <img class="img-my-avatar" src="./img/avatar_1.jpg" alt="Avatar Michele">
+                    <div class="flex-col-name-hour">
+                        <p>Michele</p>
+                        <p class="hour-font">Ultimo accesso oggi alle 12:00</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="icon-my-contact"><i class="fa-solid fa-magnifying-glass" style="color: rgb(177, 177, 177);"></i></span>
+                    <span class="icon-my-contact"><i class="fa-solid fa-paperclip"  style="color:rgb(177, 177, 177);"></i></span>
+                    <span class="icon-my-contact"><i class="fa-solid fa-ellipsis-vertical" style="color:rgb(177, 177, 177);"></i></span>
                 </div>
             </article>
+            <div class="container-chat-active">
+
+            </div>
+            <div class="taskbar-wrapper">
+                <div>
+                    <i class="fa-regular fa-face-smile" style="color:#6A7275"></i>
+                </div>
+                
+                <input class="my-textbar" placeholder="Scrivi un messaggio" type="text">
+    
+                <div>
+                    <i class="fa-solid fa-microphone" style="color:#6A7275"></i>
+                </div>
+            </div>
         </section>
     </main>
     <script src="./js/script.js"></script>
