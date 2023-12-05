@@ -48,7 +48,8 @@ article.active-contact{
 }
 
 article.active-contact div.container-chat-active{
-    height: 82vh;
+    margin-top: 8vh;
+    height: 74vh;
     width: 100%;
     border: 1px solid green;
     overflow-y: auto;
@@ -82,5 +83,8 @@ div.searchbar-wrapper{
 }
 
 div.list-contacts{
-    height:
+    height:calc(100% - 9vh - 5vh -8vh);
+    width: 100%;
+    border: 1px solid pink;
+    overflow-y: auto;
 }
