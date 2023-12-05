@@ -13,60 +13,83 @@
     <title>Vue-Boolzapp</title>
 </head>
 <body>
-    <main class="container">
-        <section class="container-contacts">
-            <article class="my-contact">
-                <div class="flex-my-contact">
-                    <img class="img-my-avatar" src="./img/avatar_io.jpg" alt="myAvatar">
-                    <p>Sofia</p>
+    
+    <!--VUE JS-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <div id="app">
+
+        <main class="container">
+            <section class="container-contacts">
+
+                <!--AVATAR + USER COMMANDS-->
+                <article class="my-contact">
+                    <div class="flex-my-contact">
+                        <img class="img-my-avatar" src="./img/avatar_io.jpg" alt="myAvatar">
+                        <p>Sofia</p>
+                    </div>
+                    <div>
+                        <span class="icon-my-contact"><i class="fa-solid fa-circle-notch" style="color: rgb(177, 177, 177);"></i></span>
+                        <span class="icon-my-contact"><i class="fa-solid fa-message" style="color:rgb(177, 177, 177);"></i></span>
+                        <span class="icon-my-contact"><i class="fa-solid fa-ellipsis-vertical" style="color:rgb(177, 177, 177);"></i></span>
+                    </div>
+                </article>
+
+                <!--ALERTS-->
+                <div class="alerts-info-wrapper">
+                    <div class="circle">
+                        <i class="fa-solid fa-bell-slash my-bell" style="color:#7ED6FC"></i>
+                    </div>
+                    <div class="wrapper-alerts-info"> 
+                    <div class="font-alerts">Ricevi notifiche di nuovi messaggi</div>
+                        <a class="font-link-alerts" href="#">Attiva notifiche Desktop</a>
+                    </div>  
                 </div>
-                <div>
-                    <span class="icon-my-contact"><i class="fa-solid fa-circle-notch" style="color: rgb(177, 177, 177);"></i></span>
-                    <span class="icon-my-contact"><i class="fa-solid fa-message" style="color:rgb(177, 177, 177);"></i></span>
-                    <span class="icon-my-contact"><i class="fa-solid fa-ellipsis-vertical" style="color:rgb(177, 177, 177);"></i></span>
+
+                <!--SEARCHBAR-->
+                <div class="searchbar-wrapper">
+                        <button class="button-searchbar"><i class="fa-solid fa-magnifying-glass" style="color: rgb(177, 177, 177);"></i></button>
+                        <input class="my-searchbar" placeholder="Cerca o inizia una nuova chat" type="text" id="searchbar-boolzapp" name="searchbar-boolzapp">   
                 </div>
-            </article>
-            <div class="alerts-info-wrapper">
 
-            </div>
-            <div class="searchbar-wrapper">
+                <!--CONTACTS LIST-->
+                <div class="list-contacts">
 
-            </div>
-            <div class="list-contacts">
+                </div>
+            </section>
+            <section class="container-chat">
+                <article class="active-contact"> 
+                    <div class="flex-my-contact">
+                        <img class="img-my-avatar" src="./img/avatar_1.jpg" alt="Avatar Michele">
+                        <div class="flex-col-name-hour">
+                            <p>Michele</p>
+                            <p class="hour-font">Ultimo accesso oggi alle 12:00</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="icon-my-contact"><i class="fa-solid fa-magnifying-glass" style="color: rgb(177, 177, 177);"></i></span>
+                        <span class="icon-my-contact"><i class="fa-solid fa-paperclip"  style="color:rgb(177, 177, 177);"></i></span>
+                        <span class="icon-my-contact"><i class="fa-solid fa-ellipsis-vertical" style="color:rgb(177, 177, 177);"></i></span>
+                    </div>
+                </article>
+                <div class="container-chat-active">
 
-            </div>
-        </section>
-        <section class="container-chat">
-            <article class="active-contact"> 
-                <div class="flex-my-contact">
-                    <img class="img-my-avatar" src="./img/avatar_1.jpg" alt="Avatar Michele">
-                    <div class="flex-col-name-hour">
-                        <p>Michele</p>
-                        <p class="hour-font">Ultimo accesso oggi alle 12:00</p>
+                </div>
+                <div class="taskbar-wrapper">
+                    <div>
+                        <i class="fa-regular fa-face-smile" style="color:#6A7275"></i>
+                    </div>
+                    
+                    <input class="my-textbar" placeholder="Scrivi un messaggio" type="text" id="textbar-boolzapp" name="textbar-boolzapp">
+        
+                    <div>
+                        <i class="fa-solid fa-microphone" style="color:#6A7275"></i>
                     </div>
                 </div>
-                <div>
-                    <span class="icon-my-contact"><i class="fa-solid fa-magnifying-glass" style="color: rgb(177, 177, 177);"></i></span>
-                    <span class="icon-my-contact"><i class="fa-solid fa-paperclip"  style="color:rgb(177, 177, 177);"></i></span>
-                    <span class="icon-my-contact"><i class="fa-solid fa-ellipsis-vertical" style="color:rgb(177, 177, 177);"></i></span>
-                </div>
-            </article>
-            <div class="container-chat-active">
-
-            </div>
-            <div class="taskbar-wrapper">
-                <div>
-                    <i class="fa-regular fa-face-smile" style="color:#6A7275"></i>
-                </div>
-                
-                <input class="my-textbar" placeholder="Scrivi un messaggio" type="text">
-    
-                <div>
-                    <i class="fa-solid fa-microphone" style="color:#6A7275"></i>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
+    <!--JS-->
     <script src="./js/script.js"></script>
 </body>
 </html>

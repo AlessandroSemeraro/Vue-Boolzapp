@@ -1,9 +1,11 @@
+/*RESET*/
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 
 body{
     background-color: #D8DBD5;
@@ -20,6 +22,7 @@ main.container{
 }
 
 
+
 /*Lista contatti left*/
 
 main.container section.container-contacts{
@@ -27,6 +30,8 @@ main.container section.container-contacts{
     height: 100%;
     border: 1px solid red;
 }
+
+/*AVATAR+USER COMMANDS*/
 
 article.my-contact{
     height: 8vh;
@@ -38,9 +43,9 @@ article.my-contact{
     background-color: #EAEAEA;
 }
 
-span.icon-my-contact{
-    margin-right: 0.6rem;
-    font-size: 1.1rem;
+.flex-my-contact{
+    display: flex;
+    align-items: center;
 }
 
 img.img-my-avatar{
@@ -49,33 +54,98 @@ img.img-my-avatar{
     margin-left: 0.3rem;
 }
 
-.flex-my-contact{
-    display: flex;
-    align-items: center;
-}
-
 div.flex-my-contact p{
     margin-left: 0.2rem;
 }
+
+span.icon-my-contact{
+    margin-right: 0.6rem;
+    font-size: 1.1rem;
+}
+
+/*ALERTS*/
 
 div.alerts-info-wrapper{
     height: 9vh;
     width: 100%;
     background-color:#7ED6FC;
+    display: flex;
+    align-items: center;
 }
+
+div.alerts-info-wrapper div.circle{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color:#F2FBFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.6rem;
+}
+
+.my-bell{
+    font-size: 1.2rem;
+}
+
+.wrapper-alerts-info{
+    margin-left: 0.4rem;
+}
+
+.font-alerts{
+    font-size: 0.85rem;
+}
+
+.font-link-alerts{
+    font-size: 0.65rem;
+    color: #5E8EA4;
+}
+
+/*SEARCHBAR*/
 
 div.searchbar-wrapper{
     height: 5vh;
     width: 100%;
     border: 1px solid orange;
+    background-color: #F9F9F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+div.searchbar-wrapper button.button-searchbar{
+    margin-left: 0.3rem;
+    width: 17%;
+    height: 2rem;
+    background-color: white;
+    border: none;
+}
+
+div.searchbar-wrapper input.my-searchbar{
+    width: 78%;
+    height: 2rem;
+    border: none;
+    margin-left: 0.15rem;
+    margin-right: 0.3rem;
+    padding: 0 0.5rem;
+}
+
+div.searchbar-wrapper input.my-searchbar::placeholder{
+    font-size: 0.7rem;
+}
+
+/*LIST CONTACTS*/
 
 div.list-contacts{
     height: calc(100% - 9vh - 8vh - 5vh);
     width: 100%;
     border: 1px solid pink;
     overflow-y: auto;
+    background-color: #FFFFFF;
 }
+
+
+
 
 
 /*Lista chat right*/
