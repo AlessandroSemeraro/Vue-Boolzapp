@@ -144,9 +144,39 @@ div.list-contacts{
     background-color: #FFFFFF;
 }
 
+li.flex-list-item-sb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.5rem;
+    border: 1px solid magenta;
+} 
 
+div.flex-list-item-img-name{
+    display: flex;
+    align-items: center;
+}
 
+div.flex-list-item-img-name img.img-my-avatar{
+    margin-left: 0.7rem;
+}
 
+div.flex-list-item-img-name div.ms-name-contact{
+    margin-left: 0.7rem;
+    padding-bottom: 1rem;
+}
+
+div.ms-name-contact p.hour-font{
+    font-size: 0.7rem;
+    color: rgb(177, 177, 177);
+    margin-top: 0.2rem;
+}
+
+li.flex-list-item-sb div.hour-last-seen{
+    font-size: 0.7rem;
+    color: rgb(177, 177, 177);
+    padding-bottom: 2.5rem;
+}
 
 /*Lista chat right*/
 
@@ -195,7 +225,7 @@ div.flex-col-name-hour p.hour-font{
 }
 
 input.my-textbar{
-    width: 75%;
+    width:80%;
     height: 2rem;
     padding: 0 0.3rem;
     border-radius: 5px;

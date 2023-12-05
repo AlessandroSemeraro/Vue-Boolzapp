@@ -13,7 +13,7 @@
     <title>Vue-Boolzapp</title>
 </head>
 <body>
-    
+
     <!--VUE JS-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -26,7 +26,7 @@
                 <article class="my-contact">
                     <div class="flex-my-contact">
                         <img class="img-my-avatar" src="./img/avatar_io.jpg" alt="myAvatar">
-                        <p>Sofia</p>
+                        <div>Sofia</div>
                     </div>
                     <div>
                         <span class="icon-my-contact"><i class="fa-solid fa-circle-notch" style="color: rgb(177, 177, 177);"></i></span>
@@ -54,7 +54,21 @@
 
                 <!--CONTACTS LIST-->
                 <div class="list-contacts">
-
+                    <ul class="contact-element-list-wrapper">
+                        <li class="flex-list-item-sb">
+                            <div class="flex-list-item-img-name">
+                                <img class="img-my-avatar" src="./img/avatar_1.jpg" alt="Avatar Michele">
+                                <div class="ms-name-contact">
+                                    <div>Michele</div>
+                                    <p class="hour-font">Ultimo messaggio inviato</p>
+                                </div>
+                            </div>
+                            <div class="hour-last-seen">
+                                <p>12:00</p>
+                            </div>
+                        </li>
+                        
+                    </ul>
                 </div>
             </section>
             <section class="container-chat">
