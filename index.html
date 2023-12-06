@@ -56,7 +56,7 @@
                 <div class="list-contacts">
                     <ul class="contact-element-list-wrapper">
 
-                        <!--CICLO V-FOR-->
+                        <!--CICLO V-FOR LISTA CONTATTI-->
                         <li v-for="(contact,index) in contacts" class="flex-list-item-sb">
                             <div class="flex-list-item-img-name">
                                 <img class="img-my-avatar" :src="contact.avatar" alt="Avatar Michele">
@@ -92,7 +92,15 @@
                     </div>
                 </article>
                 <div class="container-chat-active">
-
+                    <div class="my-messages-flex-column" v-for="(chatmessage,index) in contacts">
+                        <article class="message received">
+                            {{chatmessage.messages[0].message}}
+                        </article>
+                        <article class="message sent">
+                            #
+                        </article>
+                        
+                    </div>
                 </div>
                 <div class="taskbar-wrapper">
                     <div>
