@@ -57,9 +57,9 @@
                     <ul class="contact-element-list-wrapper">
 
                         <!--CICLO V-FOR-->
-                        <li v-for="contact in contacts" class="flex-list-item-sb">
+                        <li v-for="(contact,index) in contacts" class="flex-list-item-sb">
                             <div class="flex-list-item-img-name">
-                                <img  class="img-my-avatar" src="img/avatar_1.jpg" alt="Avatar Michele">
+                                <img class="img-my-avatar" :src="contact.avatar" alt="Avatar Michele">
                                 <div class="ms-name-contact">
                                     <div>{{contact.name}}</div>
                                     <p class="hour-font">Ultimo messaggio inviato</p>
