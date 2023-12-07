@@ -155,6 +155,10 @@ li.flex-list-item-sb {
     border: 1px solid magenta;
 } 
 
+li.flex-list-item-sb:hover{
+    background-color: rgb(232, 232, 232);
+}
+
 div.flex-list-item-img-name{
     display: flex;
     align-items: center;

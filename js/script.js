@@ -3,9 +3,9 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            
+            activeIndex: 0,
             contacts: [
-                {
+                {   
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
                     visible: true,
@@ -24,7 +24,7 @@ createApp({
                             date: '10/01/2020 16:15:22',
                             message: 'Tutto fatto!',
                             status: 'received'
-                        }
+                        }   
                     ],
                 },
                 {
@@ -167,6 +167,10 @@ createApp({
                     ],
                 }
             ]
-        }}
-        
+        }},
+       methods:{
+        ActivateOnClick(index){
+            this.activeIndex=index;
+        }
+       }
     }).mount('#app');

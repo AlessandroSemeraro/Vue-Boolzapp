@@ -57,12 +57,12 @@
                     <ul class="contact-element-list-wrapper">
 
                         <!--CICLO V-FOR LISTA CONTATTI-->
-                        <li v-for="(contact,index) in contacts" class="flex-list-item-sb">
+                        <li v-for="(contact,index) in contacts" class="flex-list-item-sb" @click="ActivateOnClick(index)">
                             <div class="flex-list-item-img-name">
                                 <img class="img-my-avatar" :src="contact.avatar" alt="Avatar Michele">
                                 <div class="ms-name-contact">
                                     <div>{{contact.name}}</div>
-                                    <p class="hour-font">Ultimo messaggio inviato</p>
+                                    <p class="hour-font">Ultimo messaggio inviato</p>   
                                 </div>
                             </div>
                             <div class="hour-last-seen">
@@ -79,9 +79,9 @@
             <section class="container-chat">
                 <article class="active-contact"> 
                     <div class="flex-my-contact">
-                        <img class="img-my-avatar" src="./img/avatar_1.jpg" alt="Avatar Michele">
+                        <img class="img-my-avatar" :src="contacts[activeIndex].avatar" alt="Avatar Michele">
                         <div class="flex-col-name-hour">
-                            <p>Michele</p>
+                            <p>{{contacts[activeIndex].name}}</p>
                             <p class="hour-font">Ultimo accesso oggi alle 12:00</p>
                         </div>
                     </div>
@@ -92,13 +92,10 @@
                     </div>
                 </article>
                 <div class="container-chat-active">
-                    <div class="my-messages-flex-column" v-for="(chatmessage,index) in contacts">
-                        <article class="message received">
-                            {{chatmessage.messages[0].message}}
+                    <div class="my-messages-flex-column">
+                        <article v-for="(message,index) in contacts[activeIndex].messages" class="message" :class="message.status">
+                           <p>{{message.message}} </p>
                         </article>
-                        <article class="message sent">
-                        </article>
-                        
                     </div>
                 </div>
                 <div class="taskbar-wrapper">
