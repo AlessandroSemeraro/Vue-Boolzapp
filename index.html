@@ -77,9 +77,11 @@
 
             <!--RIGHT CONTAINER-->
             <section class="container-chat">
+
+                <!--HEADER RIGHT CONTAINER-->
                 <article class="active-contact"> 
                     <div class="flex-my-contact">
-                        <img class="img-my-avatar" :src="contacts[activeIndex].avatar" alt="Avatar Michele">
+                        <img class="img-my-avatar" :src="contacts[activeIndex].avatar" alt="Avatar">
                         <div class="flex-col-name-hour">
                             <p>{{contacts[activeIndex].name}}</p>
                             <p class="hour-font">Ultimo accesso oggi alle 12:00</p>
@@ -91,6 +93,8 @@
                         <span class="icon-my-contact"><i class="fa-solid fa-ellipsis-vertical" style="color:rgb(177, 177, 177);"></i></span>
                     </div>
                 </article>
+
+                <!--CHAT-->
                 <div class="container-chat-active">
                     <div class="my-messages-flex-column">
                         <article v-for="(message,index) in contacts[activeIndex].messages" class="message" :class="message.status">
@@ -98,17 +102,18 @@
                         </article>
                     </div>
                 </div>
+
+                <!--TASKBAR-->
                 <div class="taskbar-wrapper">
                     <div>
                         <i class="fa-regular fa-face-smile" style="color:#6A7275"></i>
                     </div>
-                    
-                    <input class="my-textbar" placeholder="Scrivi un messaggio" type="text" id="textbar-boolzapp" name="textbar-boolzapp">
-        
+                    <input v-model="newMessageReceived" @keyup.enter="addNewMessage(newMessageReceived)" class="my-textbar" placeholder="Scrivi un messaggio" type="text" id="textbar-boolzapp" name="textbar-boolzapp">
                     <div>
                         <i class="fa-solid fa-microphone" style="color:#6A7275"></i>
                     </div>
                 </div>
+
             </section>
         </main>
     </div>

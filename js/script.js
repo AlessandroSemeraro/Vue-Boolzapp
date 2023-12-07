@@ -4,7 +4,9 @@ createApp({
     data() {
         return {
             activeIndex: 0,
+            newMessageReceived:'',
             contacts: [
+                
                 {   
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
@@ -169,8 +171,14 @@ createApp({
             ]
         }},
        methods:{
+
         ActivateOnClick(index){
             this.activeIndex=index;
+        },
+
+       addNewMessage(newMessage){
+           console.warn(newMessage);
         }
+    
        }
     }).mount('#app');
