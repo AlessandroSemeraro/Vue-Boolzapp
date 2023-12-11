@@ -6,6 +6,14 @@ createApp({
             activeIndex: 0,
             newMessageSent: '', 
            
+
+            selectContact: [
+                name: '',
+                avatar: '',
+                visible: true,
+                messages: []
+            ]
+
             contacts: [            
                 {   
                     name: 'Michele',
@@ -174,19 +182,24 @@ createApp({
        methods:{
 
         ActivateOnClick(index){
+
             this.activeIndex=index;
         },
 
+        
         addNewMessage(newMessage){
 
             if(this.contacts.length > 0 && this.newMessageSent.length > 0){  
             
             const newMessage = {
                 message: this.newMessageSent,
-                status: 'sent'
+                status: 'sent',
             };
 
-            this.contacts[this.activeIndex].messages.push(newMessage);     
+            this.contacts[this.activeIndex].messages.push(newMessage);   
+            this.newMessageSent='';      
        }
        },
+
+
     }}).mount('#app');
