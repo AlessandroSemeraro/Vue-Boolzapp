@@ -4,9 +4,9 @@ createApp({
     data() {
         return {
             activeIndex: 0,
-            newMessageReceived:'',
-            contacts: [
-                
+            newMessageSent: '', 
+           
+            contacts: [            
                 {   
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
@@ -168,6 +168,7 @@ createApp({
                         }
                     ],
                 }
+                
             ]
         }},
        methods:{
@@ -176,9 +177,16 @@ createApp({
             this.activeIndex=index;
         },
 
-       addNewMessage(newMessage){
-           console.warn(newMessage);
-        }
-    
+        addNewMessage(newMessage){
+
+            if(this.contacts.length > 0 && this.newMessageSent.length > 0){  
+            
+            const newMessage = {
+                message: this.newMessageSent,
+                status: 'sent'
+            };
+
+            this.contacts[this.activeIndex].messages.push(newMessage);     
        }
-    }).mount('#app');
+       },
+    }}).mount('#app');

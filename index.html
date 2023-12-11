@@ -97,9 +97,11 @@
                 <!--CHAT-->
                 <div class="container-chat-active">
                     <div class="my-messages-flex-column">
-                        <article v-for="(message,index) in contacts[activeIndex].messages" class="message" :class="message.status">
+                        <article  v-for="(message,index) in contacts[activeIndex].messages" class="message" :class="message.status">
                            <p>{{message.message}} </p>
                         </article>
+               
+                        
                     </div>
                 </div>
 
@@ -108,7 +110,7 @@
                     <div>
                         <i class="fa-regular fa-face-smile" style="color:#6A7275"></i>
                     </div>
-                    <input v-model="newMessageReceived" @keyup.enter="addNewMessage(newMessageReceived)" class="my-textbar" placeholder="Scrivi un messaggio" type="text" id="textbar-boolzapp" name="textbar-boolzapp">
+                    <input @keyup.enter="addNewMessage(newMessageSent)" v-model="newMessageSent"  class="my-textbar" placeholder="Scrivi un messaggio" type="text" id="textbar-boolzapp" name="textbar-boolzapp">
                     <div>
                         <i class="fa-solid fa-microphone" style="color:#6A7275"></i>
                     </div>
