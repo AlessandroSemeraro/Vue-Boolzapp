@@ -6,14 +6,6 @@ createApp({
             activeIndex: 0,
             newMessageSent: '', 
            
-
-            selectContact: [
-                name: '',
-                avatar: '',
-                visible: true,
-                messages: []
-            ]
-
             contacts: [            
                 {   
                     name: 'Michele',
@@ -197,8 +189,10 @@ createApp({
             };
 
             this.contacts[this.activeIndex].messages.push(newMessage);   
-            this.newMessageSent='';      
+            this.newMessageSent='' ;
+            
        }
+       
        },
 
 
